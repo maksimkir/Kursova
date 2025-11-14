@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iomanip>
 
-StoreItem::StoreItem() 
+StoreItem::StoreItem()
     : m_name(""), m_unit(""), m_price(0.0), m_quantity(0), m_lastSupplyDate("") {}
 
 StoreItem::StoreItem(const std::string& name, const std::string& unit, double price, int quantity, const std::string& lastSupplyDate)
@@ -16,9 +16,9 @@ StoreItem::~StoreItem() {}
 
 void StoreItem::DisplayInfo() const
 {
-    std::cout << "--- Товар: " << std::left << std::setw(20) << m_name 
-              << " | Ціна: " << std::fixed << std::setprecision(2) << m_price 
-              << " | Залишок: " << m_quantity 
+    std::cout << "--- Товар: " << std::left << std::setw(20) << m_name
+              << " | Ціна: " << std::fixed << std::setprecision(2) << m_price
+              << " | Залишок: " << m_quantity
               << " " << m_unit << " | Завезено: " << m_lastSupplyDate << std::endl;
 }
 
