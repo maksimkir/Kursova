@@ -4,5 +4,5 @@ project(Kursova_2kurs_)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(Kursova_2kurs_ main.cpp
-        IPrintable.cpp
-        IPrintable.h)
+        IPrintable.h
+        Product.h)
