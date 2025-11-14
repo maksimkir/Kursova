@@ -13,7 +13,7 @@ public:
     StoreItem();
     StoreItem(const std::string& name, const std::string& unit, double price, int quantity, const std::string& lastSupplyDate);
     StoreItem(const StoreItem& other); // Копіювальний конструктор
-    ~StoreItem(); 
+    ~StoreItem();
 
     // == Get/Set методи (PascalCase) ==
     std::string GetName() const override { return m_name; }
@@ -24,7 +24,7 @@ public:
     void SetPrice(double price) override { m_price = price; }
     int GetQuantity() const { return m_quantity; }
     void SetQuantity(int quantity) { m_quantity = quantity; }
-    void UpdateQuantity(int change) { m_quantity += change; } 
+    void UpdateQuantity(int change) { m_quantity += change; }
     std::string GetLastSupplyDate() const { return m_lastSupplyDate; }
     void SetLastSupplyDate(const std::string& date) { m_lastSupplyDate = date; }
 
