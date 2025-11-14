@@ -7,9 +7,8 @@
  * @brief Абстрактний базовий клас User. Забезпечує базову інкапсуляцію
  * та поліморфізм для прав доступу.
  */
-class User 
+class User
 {
-
 public:
     User(const std::string& login, const std::string& password);
 
