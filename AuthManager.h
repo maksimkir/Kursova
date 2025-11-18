@@ -14,11 +14,11 @@ public:
     AuthManager(const std::string& userFile);
     ~AuthManager();
 
-    // 1.6. Функції авторизації та виходу
+    //авторизації та вихід
     bool AuthenticateUser(const std::string& login, const std::string& password);
     void Logout() { m_currentUser.reset(); }
 
-    // 1.6. Функції адміністратора (Керування користувачами)
+    //адміністратор (Керування користувачами)
     void AddNewUser();
     void DeleteUser();
     void DisplayAllUsers() const;
@@ -27,14 +27,16 @@ public:
     User* GetCurrentUser() const { return m_currentUser.get(); }
 
 private:
-    std::vector<std::unique_ptr<User>> m_users; // 2.4. Використання std::vector та std::unique_ptr
+    std::vector<std::unique_ptr<User>> m_users;
     std::unique_ptr<User> m_currentUser;
     const std::string m_userFile;
 
+    //.
     // 4. Робота з файлами
     bool LoadUsersFromFile(); // 4.1. Програма зчитує дані з файлів при запуску.
     void SaveUsers() const; // 4.2. При виході — зберігає оновлені дані.
-    
-    // 3. Обробка помилок та надійність
+    //.
+
+    //обробка помилок
     bool ValidateUserCredentials(const std::string& login, const std::string& password) const;
 };

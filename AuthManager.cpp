@@ -1,7 +1,7 @@
 #include "AuthManager.h"
-#include "Configuration.h" // Для доступу до Configuration::s_logger та ClearInputBuffer
-#include "Admin.h"         // Додано для створення Admin
-#include "BasicUser.h"     // Додано для створення BasicUser
+#include "Configuration.h"
+#include "Admin.h"
+#include "BasicUser.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -12,21 +12,21 @@
 
 AuthManager::AuthManager(const std::string& userFile) : m_userFile(userFile)
 {
-    Configuration::s_logger->LogInfo("Ініціалізація AuthManager."); // Журналювання
+    Configuration::s_logger->LogInfo("Ініціалізація AuthManager.");
     LoadUsersFromFile();
 }
 
 AuthManager::~AuthManager()
 {
     SaveUsers();
-    Configuration::s_logger->LogInfo("AuthManager знищено. Дані користувачів збережено."); // Журналювання
+    Configuration::s_logger->LogInfo("AuthManager знищено. Дані користувачів збережено.");
 }
 
 bool AuthManager::LoadUsersFromFile()
 {
     std::ifstream file(m_userFile);
     if (!file.is_open()) {
-        Configuration::s_logger->LogInfo("Файл користувачів не знайдено. Створення базового Admin."); // Журналювання
+        Configuration::s_logger->LogInfo("Файл користувачів не знайдено. Створення базового Admin.");
         std::cout << "// Попередження: Файл користувачів не знайдено. Створення базового Admin." << std::endl;
         // Створення базового Admin, якщо файл порожній (для ініціалізації)
         m_users.push_back(std::make_unique<Admin>("admin", "admin123"));
@@ -42,7 +42,6 @@ bool AuthManager::LoadUsersFromFile()
                 std::string login = line.substr(0, colonPos);
                 std::string password = line.substr(colonPos + 1);
 
-                // Оскільки роль не зберігається, використовуємо 'admin' як критерій
                 bool isAdmin = (login == "admin");
 
                 if (isAdmin) {
@@ -54,11 +53,11 @@ bool AuthManager::LoadUsersFromFile()
                 throw std::runtime_error("Невірний формат рядка (відсутній ':')");
             }
         } catch (const std::exception& e) {
-            Configuration::s_logger->LogError("Помилка формату даних у users.txt: " + line + " (" + e.what() + ")"); // Журналювання
+            Configuration::s_logger->LogError("Помилка формату даних у users.txt: " + line + " (" + e.what() + ")");
             std::cerr << "// Помилка формату даних у users.txt: " << e.what() << std::endl;
         }
     }
-    Configuration::s_logger->LogInfo("Користувачів успішно завантажено: " + std::to_string(m_users.size())); // Журналювання
+    Configuration::s_logger->LogInfo("Користувачів успішно завантажено: " + std::to_string(m_users.size()));
     return true;
 }
 
@@ -66,7 +65,7 @@ void AuthManager::SaveUsers() const
 {
     std::ofstream file(m_userFile);
     if (!file.is_open()) {
-        Configuration::s_logger->LogError("Не вдалося зберегти дані користувачів."); // Журналювання
+        Configuration::s_logger->LogError("Не вдалося зберегти дані користувачів.");
         std::cerr << "// Помилка: Не вдалося зберегти дані користувачів." << std::endl;
         return;
     }
@@ -81,7 +80,7 @@ bool AuthManager::ValidateUserCredentials(const std::string& login, const std::s
 {
     // 3. Обробка помилок та надійність: перевірка коректності даних
     if (login.empty() || password.empty()) {
-        Configuration::s_logger->LogError("Спроба авторизації з порожніми логіном/паролем."); // Журналювання
+        Configuration::s_logger->LogError("Спроба авторизації з порожніми логіном/паролем.");
         std::cerr << "// Помилка: Логін або пароль не можуть бути порожніми." << std::endl;
         return false;
     }
@@ -110,7 +109,7 @@ bool AuthManager::AuthenticateUser(const std::string& login, const std::string& 
         return true;
     }
 
-    Configuration::s_logger->LogError("Невірна спроба авторизації для логіна: " + login); // Журналювання
+    Configuration::s_logger->LogError("Невірна спроба авторизації для логіна: " + login);
     std::cerr << "// Помилка: Невірний логін або пароль." << std::endl;
     return false;
 }
