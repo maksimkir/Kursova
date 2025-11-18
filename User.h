@@ -3,10 +3,6 @@
 #include <string>
 #include <iostream>
 
-/**
- * @brief Абстрактний базовий клас User. Забезпечує базову інкапсуляцію
- * та поліморфізм для прав доступу.
- */
 class User
 {
 public:
@@ -14,11 +10,10 @@ public:
 
     virtual ~User() = default;
 
-    // == Поліморфні методи (чисто віртуальні) ==
+    //Поліморфні методи (чисто віртуальні)
     virtual bool IsAdmin() const = 0; 
     virtual void DisplayMenu() const = 0; 
 
-    // == Get/Set методи ==
     std::string GetLogin() const { return m_login; }
     std::string GetPassword() const { return m_password; }
     bool IsAuthenticated() const { return m_isAuthenticated; }
