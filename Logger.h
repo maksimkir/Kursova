@@ -3,9 +3,6 @@
 #include <string>
 #include <iostream>
 
-/**
- * @brief Простий клас для журналювання подій.
- */
 class Logger
 {
 public:
