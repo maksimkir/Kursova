@@ -4,21 +4,13 @@
 #include <string>
 #include <memory>
 
-class StoreManager; // Попередня декларація
+class StoreManager;
 
-/**
- * @brief Клас SaleProcessor. Керує логікою оформлення покупки (виписка чека)
- * та взаємодіє зі StoreManager для коректування бази.
- */
 class SaleProcessor final
 {
 public:
     SaleProcessor(StoreManager& manager);
-    
-    /**
-     * @brief Оформляє повну покупку з кількох товарів.
-     * @param cashierName Ім'я касира (поточний користувач).
-     */
+
     void ProcessFullSale(const std::string& cashierName);
 
 private:
