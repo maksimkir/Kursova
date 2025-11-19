@@ -1,10 +1,8 @@
 #pragma once
 
-#include "User.h" // Успадковуємо від базового класу User
+#include "User.h"
 
-/**
- * @brief Клас BasicUser. Має обмежені права (Касир).
- */
+
 class BasicUser final : public User
 {
 public:
@@ -13,5 +11,5 @@ public:
 
     bool IsAdmin() const override { return false; }
 
-    void DisplayMenu() const override; // Оголошення у .h
+    void DisplayMenu() const override;
 };
