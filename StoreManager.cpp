@@ -140,7 +140,6 @@ void StoreManager::EditObject()
             case 2: {
                 int newQuantity = Configuration::GetSafeNumberInput<int>("Введіть нову кількість: ");
                 item->SetQuantity(newQuantity);
-                // Це також виконує функціонал "Реєстрація надходження товару"
                 break;
             }
             case 3: {
@@ -232,7 +231,6 @@ void StoreManager::SearchObjects() const
 
 void StoreManager::InternalSort(std::function<bool(const ProductPointer&, const ProductPointer&)> comparator)
 {
-    // 2.4. Обов'язково передбачити: сортування
     std::sort(m_products.begin(), m_products.end(), comparator);
 }
 
