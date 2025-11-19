@@ -1,3 +1,5 @@
+#include <complex>
+
 #include "AuthManager.h"
 #include "StoreManager.h"
 #include "Configuration.h"
@@ -5,12 +7,9 @@
 #include <iostream>
 #include <limits>
 
-/**
- * @brief Головна функція програми.
- */
 int main()
 {
-    // Ініціалізація основних менеджерів
+    //ініціалізація основних менеджерів
     AuthManager authManager(Configuration::USER_DATA_FILE);
     StoreManager storeManager(Configuration::PRODUCT_DATA_FILE);
     SaleProcessor saleProcessor(storeManager);
@@ -22,9 +21,8 @@ int main()
     while (true)
     {
         if (!currentUser) {
-            // 1.6. При запуску програма запитує логін і пароль.
             std::cout << "\n======== СИСТЕМА УПРАВЛІННЯ МАГАЗИНОМ ========" << std::endl;
-            std::cout << "Введіть 0 для виходу або дані для авторизації (admin:admin123)." << std::endl;
+            std::cout << "Введіть 0 для виходу або дані для авторизації." << std::endl;
             std::cout << "Логін: ";
             std::cin >> login;
             if (login == "0") break;
@@ -39,7 +37,6 @@ int main()
             }
         }
 
-        // 1.5. Програма повинна мати реалізоване текстове меню з навігацією.
         currentUser->DisplayMenu();
         std::cout << "Ваш вибір: ";
 
@@ -51,7 +48,7 @@ int main()
         Configuration::ClearInputBuffer();
 
         if (currentUser->IsAdmin()) {
-            // == Обробка меню Адміністратора ==
+            //обробка меню Адміністратора
             switch (choice) {
                 case 1: storeManager.AddObject(); break;
                 case 2: storeManager.EditObject(); break;
@@ -66,14 +63,15 @@ int main()
                 default: std::cerr << "// Невірний вибір." << std::endl; break;
             }
         } else {
-            // == Обробка меню Користувача (Касира) ==
+            //обробка меню Користувача
             switch (choice) {
                 case 1: saleProcessor.ProcessFullSale(currentUser->GetLogin()); break;
                 case 2: storeManager.ViewObjects(); break;
                 case 3: storeManager.SearchObjects(); break;
-                case 4: storeManager.DisplayHelp(); break;
+                case 4: storeManager.DisplayHelp(); break;std::
                 case 0: authManager.Logout(); currentUser = nullptr; break;
-                default: std::cerr << "// Невірний вибір." << std::endl; break;
+
+                default: std::cerr << "// Невірний вибір." << std::endl; break
             }
         }
     }
