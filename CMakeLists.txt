@@ -25,4 +25,5 @@ add_executable(Kursova_2kurs_ main.cpp
         StoreManager.h
         Product.h
         Logger.h
+        store_items.csv
 )
