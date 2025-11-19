@@ -68,10 +68,10 @@ int main()
                 case 1: saleProcessor.ProcessFullSale(currentUser->GetLogin()); break;
                 case 2: storeManager.ViewObjects(); break;
                 case 3: storeManager.SearchObjects(); break;
-                case 4: storeManager.DisplayHelp(); break;std::
+                case 4: storeManager.DisplayHelp(); break;std:
                 case 0: authManager.Logout(); currentUser = nullptr; break;
 
-                default: std::cerr << "// Невірний вибір." << std::endl; break
+                default: std::cerr << "// Невірний вибір." << std::endl; break;
             }
         }
     }
