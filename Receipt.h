@@ -4,9 +4,6 @@
 #include <vector>
 #include "IPrintable.h"
 
-/**
- * @brief Клас Receipt. Модель даних для виписаного чека (Оформлення покупки: виписка чека).
- */
 class Receipt final : public IPrintable
 {
 public:
@@ -22,7 +19,7 @@ public:
     void AddItem(const std::string& itemName, double price, int quantity);
     double CalculateTotal() const;
     int GetReceiptId() const { return m_receiptId; }
-    void DisplayInfo() const override; // 5.1. Виводить чек у форматованому вигляді (IPrintable)
+    void DisplayInfo() const override;
 
 private:
     int m_receiptId;
