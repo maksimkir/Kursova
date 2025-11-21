@@ -22,9 +22,16 @@ bool StoreManager::LoadProducts()
     if (!file.is_open()) return false;
 
     std::string line;
-    std::getline(file, line); // Пропускаємо заголовок
+    std::getline(file, line);
 
     while (std::getline(file, line)) {
+        if (!line.empty() && line.back() == '\r') {
+            line.pop_back();
+        }
+        
+        // Пропускаємо порожні рядки
+        if (line.empty()) continue;
+        
         std::stringstream ss(line);
         std::string name, unit, lastSupplyDate, sPrice, sQuantity;
 
@@ -33,7 +40,7 @@ bool StoreManager::LoadProducts()
                 !std::getline(ss, unit, ',') ||
                 !std::getline(ss, sPrice, ',') ||
                 !std::getline(ss, sQuantity, ',') ||
-                !std::getline(ss, lastSupplyDate, '\r'))
+                !std::getline(ss, lastSupplyDate))
             {
                 std::cerr << "// Помилка: Неповний рядок даних у файлі." << std::endl;
                 continue;
@@ -188,17 +195,21 @@ void StoreManager::ViewObjects() const
     }
 
     std::cout << "\n================================== СПИСОК ТОВАРІВ ==================================" << std::endl;
-    std::cout << "Назва                 | Ціна    | Залишок | Од. | Дата Завозу" << std::endl;
-    std::cout << "----------------------|---------|---------|-----|------------" << std::endl;
+    std::cout << std::left << std::setw(22) << "Назва" << " | "
+              << std::right << std::setw(9) << "Ціна" << " | "
+              << std::right << std::setw(9) << "Залишок" << " | "
+              << std::left << std::setw(5) << "Од." << " | "
+              << std::left << "Дата Завозу" << std::endl;
+    std::cout << "--------------|-----------|-----------|-----|----------------" << std::endl;
 
     for (const auto& product : m_products) {
         // Використовуємо dynamic_cast для доступу до полів StoreItem (якщо потрібно)
         if (auto item = dynamic_cast<StoreItem*>(product.get())) {
-            std::cout << std::left << std::setw(22) << item->GetName() << "|"
-                      << std::right << std::setw(7) << std::fixed << std::setprecision(2) << item->GetPrice() << " |"
-                      << std::right << std::setw(7) << item->GetQuantity() << " |"
-                      << std::left << std::setw(3) << item->GetUnit() << " | "
-                      << item->GetLastSupplyDate() << std::endl;
+            std::cout << std::left << std::setw(22) << item->GetName() << " | "
+                      << std::right << std::setw(9) << std::fixed << std::setprecision(2) << item->GetPrice() << " | "
+                      << std::right << std::setw(9) << item->GetQuantity() << " | "
+                      << std::left << std::setw(5) << item->GetUnit() << " | "
+                      << std::left << item->GetLastSupplyDate() << std::endl;
         }
     }
     std::cout << "===================================================================================" << std::endl;
@@ -317,18 +328,18 @@ void StoreManager::DisplayHelp() const
 
     std::cout << "1. ПОЯСНЕННЯ РОБОТИ ПРОГРАМИ:" << std::endl;
     std::cout << "   - Програма є консольним додатком для управління базою товарів магазину." << std::endl;
-    std::cout << "   - Робота починається з авторизації (Admin має повні права, User - обмежені)." << std::endl;
+    std::cout << "   - Робота починається з авторизації (Admin має повні права, User - обмежені." << std::endl;
     std::cout << "   - Дані про товари зберігаються у файлі 'store_items.csv', дані користувачів - 'users.txt'." << std::endl;
-    std::cout << "   - При виході дані автоматично зберігаються (4.2. Зберігає оновлені дані)." << std::endl;
+    std::cout << "   - При виході дані автоматично зберігаються ." << std::endl;
 
     std::cout << "\n2. ПРАВИЛА ВВОДУ ДАНИХ:" << std::endl;
     std::cout << "   - Усі числові поля (ціна, кількість) вимагають введення додатних чисел." << std::endl;
-    std::cout << "   - Система автоматично перевіряє коректність формату та діапазону введених даних (3.1. Перевірка коректності)." << std::endl;
+    std::cout << "   - Система автоматично перевіряє коректність формату та діапазону введених даних." << std::endl;
 
     std::cout << "\n3. КОРОТКИЙ ОПИС КОМАНД (Касир):" << std::endl;
     std::cout << "   - [1] Оформити покупку: Відкриває цикл продажу, виписує чек та коректує базу." << std::endl;
-    std::cout << "   - [2] Переглянути: Виводить повний список товарів (1.5)." << std::endl;
-    std::cout << "   - [3] Шукати: Дозволяє знайти товар за частиною назви (1.5)." << std::endl;
+    std::cout << "   - [2] Переглянути: Виводить повний список товарів." << std::endl;
+    std::cout << "   - [3] Шукати: Дозволяє знайти товар за частиною назви." << std::endl;
     std::cout << "   - [0] Вийти: Вихід з облікового запису." << std::endl;
 
     std::cout << "===================================================================================" << std::endl;
