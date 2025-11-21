@@ -28,7 +28,6 @@ bool AuthManager::LoadUsersFromFile()
     if (!file.is_open()) {
         Configuration::s_logger->LogInfo("Файл користувачів не знайдено. Створення базового Admin.");
         std::cout << "// Попередження: Файл користувачів не знайдено. Створення базового Admin." << std::endl;
-        // Створення базового Admin, якщо файл порожній (для ініціалізації)
         m_users.push_back(std::make_unique<Admin>("admin", "admin123"));
         return false;
     }
@@ -70,7 +69,6 @@ void AuthManager::SaveUsers() const
         return;
     }
 
-    // Паролі зберігаються у відкритому вигляді
     for (const auto& user : m_users) {
         file << user->GetLogin() << ":" << user->GetPassword() << std::endl;
     }
@@ -78,7 +76,6 @@ void AuthManager::SaveUsers() const
 
 bool AuthManager::ValidateUserCredentials(const std::string& login, const std::string& password) const
 {
-    // 3. Обробка помилок та надійність: перевірка коректності даних
     if (login.empty() || password.empty()) {
         Configuration::s_logger->LogError("Спроба авторизації з порожніми логіном/паролем.");
         std::cerr << "// Помилка: Логін або пароль не можуть бути порожніми." << std::endl;
@@ -97,7 +94,6 @@ bool AuthManager::AuthenticateUser(const std::string& login, const std::string& 
         });
 
     if (it != m_users.end()) {
-        // Доступ до основних функцій надається лише після успішної авторизації
         if ((*it)->IsAdmin()) {
             m_currentUser = std::make_unique<Admin>(login, password);
         } else {
