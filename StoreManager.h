@@ -15,18 +15,17 @@ public:
     StoreManager(const std::string& productFile);
     ~StoreManager();
 
-    void AddObject(); // Додавати нові об'єкти (Реєстрація надходження товару)
-    void EditObject(); // Редагувати існуючі
-    void DeleteObject(); // Видаляти об'єкти (Проблема уцінки і списання)
-    void ViewObjects() const; // Переглядати списки об'єктів
+    void AddObject();
+    void EditObject();
+    void DeleteObject();
+    void ViewObjects() const;
 
-    void SearchObjects() const; // Шукати за критеріями
-    void SortObjects(); // Сортувати дані
-    void FilterObjects() const; // Фільтрувати записи за заданою умовою
-    void PerformInventory() const; // Інвентаризація залишків товару з обчисленням сумарної вартості
-    void DisplayHelp() const; // Виводити інструкцію користувача
+    void SearchObjects() const;
+    void SortObjects();
+    void FilterObjects() const;
+    void PerformInventory() const;
+    void DisplayHelp() const;
 
-    // Метод для роботи з продажами
     StoreItem* GetItemForSale(const std::string& name);
 
 private:
@@ -34,8 +33,8 @@ private:
     const std::string m_productFile;
 
 
-    bool LoadProducts(); //Програма зчитує дані з файлів при запуску.
-    bool SaveProducts() const; //При виході — зберігає оновлені дані.
+    bool LoadProducts();
+    bool SaveProducts() const;
 
 
     StoreItem* FindStoreItemByName(const std::string& name);
