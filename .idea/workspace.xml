@@ -26,9 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +110,7 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Kursova_2kurs_" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Kursova_2kurs_" TARGET_NAME="Kursova_2kurs_" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Kursova_2kurs_" RUN_TARGET_NAME="Kursova_2kurs_">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -142,39 +140,7 @@
       <workItem from="1763660631680" duration="792000" />
       <workItem from="1763709800691" duration="1236000" />
       <workItem from="1763735978608" duration="9461000" />
-      <workItem from="1763759819538" duration="6040000" />
-    </task>
-    <task id="LOCAL-00005" summary="create class Storeltem.cpp">
-      <option name="closed" value="true" />
-      <created>1763125646465</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1763125646465</updated>
-    </task>
-    <task id="LOCAL-00006" summary="create User.h">
-      <option name="closed" value="true" />
-      <created>1763126145268</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126145268</updated>
-    </task>
-    <task id="LOCAL-00007" summary="create User.h">
-      <option name="closed" value="true" />
-      <created>1763126160044</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126160044</updated>
-    </task>
-    <task id="LOCAL-00008" summary="create User.cpp">
-      <option name="closed" value="true" />
-      <created>1763126188447</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126188447</updated>
+      <workItem from="1763759819538" duration="6321000" />
     </task>
     <task id="LOCAL-00009" summary="create Admin.h">
       <option name="closed" value="true" />
@@ -536,7 +502,39 @@
       <option name="project" value="LOCAL" />
       <updated>1763759913340</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="added presentation">
+      <option name="closed" value="true" />
+      <created>1763818449667</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818449667</updated>
+    </task>
+    <task id="LOCAL-00055" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763818458677</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818458677</updated>
+    </task>
+    <task id="LOCAL-00056" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763818462697</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818462697</updated>
+    </task>
+    <task id="LOCAL-00057" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763818481143</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818481144</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +546,6 @@
     <isAutomaticReloadCMake value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create StoreManager.cpp" />
     <MESSAGE value="create StoreManager.h" />
     <MESSAGE value="create Logger.h" />
     <MESSAGE value="create main.cpp" />
@@ -572,6 +569,7 @@
     <MESSAGE value="added update for main.cpp" />
     <MESSAGE value="add csv fail" />
     <MESSAGE value="add documentation" />
+    <MESSAGE value="added presentation" />
     <MESSAGE value="added update" />
     <option name="LAST_COMMIT_MESSAGE" value="added update" />
   </component>
