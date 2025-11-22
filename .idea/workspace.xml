@@ -26,11 +26,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="add csv fail">
-      <change beforePath="$PROJECT_DIR$/AuthManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AuthManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/AuthManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/StoreManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/StoreManager.h" afterDir="false" />
+    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,39 +142,7 @@
       <workItem from="1763660631680" duration="792000" />
       <workItem from="1763709800691" duration="1236000" />
       <workItem from="1763735978608" duration="9461000" />
-      <workItem from="1763759819538" duration="7000" />
-    </task>
-    <task id="LOCAL-00001" summary="create class Product.h(abstract)">
-      <option name="closed" value="true" />
-      <created>1763048220693</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1763048220693</updated>
-    </task>
-    <task id="LOCAL-00002" summary="create class Product.h(abstract)">
-      <option name="closed" value="true" />
-      <created>1763124929225</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1763124929225</updated>
-    </task>
-    <task id="LOCAL-00003" summary="create class Product.h(abstract)">
-      <option name="closed" value="true" />
-      <created>1763124966291</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1763124966291</updated>
-    </task>
-    <task id="LOCAL-00004" summary="create class Storeltem.h">
-      <option name="closed" value="true" />
-      <created>1763125607364</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1763125607364</updated>
+      <workItem from="1763759819538" duration="6040000" />
     </task>
     <task id="LOCAL-00005" summary="create class Storeltem.cpp">
       <option name="closed" value="true" />
@@ -523,7 +488,55 @@
       <option name="project" value="LOCAL" />
       <updated>1763591303207</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add documentation">
+      <option name="closed" value="true" />
+      <created>1763759880064</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1763759880064</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763759898484</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1763759898484</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763759901612</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1763759901620</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763759903710</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1763759903710</updated>
+    </task>
+    <task id="LOCAL-00052" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763759905960</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1763759905962</updated>
+    </task>
+    <task id="LOCAL-00053" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763759913340</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1763759913340</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,8 +548,6 @@
     <isAutomaticReloadCMake value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create StoreItem.cpp" />
-    <MESSAGE value="create StoreItem.h" />
     <MESSAGE value="create StoreManager.cpp" />
     <MESSAGE value="create StoreManager.h" />
     <MESSAGE value="create Logger.h" />
@@ -560,6 +571,8 @@
     <MESSAGE value="added update for CMakeLists.txt" />
     <MESSAGE value="added update for main.cpp" />
     <MESSAGE value="add csv fail" />
-    <option name="LAST_COMMIT_MESSAGE" value="add csv fail" />
+    <MESSAGE value="add documentation" />
+    <MESSAGE value="added update" />
+    <option name="LAST_COMMIT_MESSAGE" value="added update" />
   </component>
 </project>
