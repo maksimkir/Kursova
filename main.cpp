@@ -63,7 +63,6 @@ int main()
                 default: std::cerr << "// Невірний вибір." << std::endl; break;
             }
         } else {
-            //обробка меню Користувача
             switch (choice) {
                 case 1: saleProcessor.ProcessFullSale(currentUser->GetLogin()); break;
                 case 2: storeManager.ViewObjects(); break;
