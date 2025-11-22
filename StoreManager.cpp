@@ -62,15 +62,24 @@ bool StoreManager::LoadProducts()
 
 bool StoreManager::SaveProducts() const
 {
-    std::ofstream file(m_productFile);
-    if (!file.is_open()) return false;
+    try {
+        std::ofstream file(m_productFile);
+        if (!file.is_open()) {
+            Configuration::s_logger->LogError("Не вдалося відкрити файл для збереження товарів: " + m_productFile);
+            return false;
+        }
 
-    file << "Name,Unit,Price,Quantity,LastSupplyDate" << std::endl;
+        file << "Name,Unit,Price,Quantity,LastSupplyDate" << std::endl;
 
-    for (const auto& product : m_products) {
-        file << product->ToCSVString() << std::endl;
+        for (const auto& product : m_products) {
+            file << product->ToCSVString() << std::endl;
+        }
+        return true;
+    } catch (const std::exception& e) {
+        Configuration::s_logger->LogError("Помилка при збереженні товарів: " + std::string(e.what()));
+        std::cerr << "// Помилка при збереженні товарів: " << e.what() << std::endl;
+        return false;
     }
-    return true;
 }
 
 StoreItem* StoreManager::FindStoreItemByName(const std::string& name)
@@ -91,79 +100,94 @@ StoreItem* StoreManager::GetItemForSale(const std::string& name)
 
 void StoreManager::AddObject()
 {
-    std::string name, unit, lastSupplyDate;
-    double price;
-    int quantity;
+    try {
+        std::string name, unit, lastSupplyDate;
+        double price;
+        int quantity;
 
-    std::cout << "\n=== СТВОРЕННЯ НОВОГО ТОВАРУ ===" << std::endl;
+        std::cout << "\n=== СТВОРЕННЯ НОВОГО ТОВАРУ ===" << std::endl;
 
-    std::cout << "Введіть назву товару: ";
-    Configuration::ClearInputBuffer();
-    std::getline(std::cin, name);
+        std::cout << "Введіть назву товару: ";
+        Configuration::ClearInputBuffer();
+        std::getline(std::cin, name);
 
-    std::cout << "Введіть одиницю виміру (шт, кг, л): ";
-    std::getline(std::cin, unit);
+        std::cout << "Введіть одиницю виміру (шт, кг, л): ";
+        std::getline(std::cin, unit);
 
-    price = Configuration::GetSafeNumberInput<double>("Введіть ціну одиниці: ");
-    quantity = Configuration::GetSafeNumberInput<int>("Введіть кількість: ");
+        price = Configuration::GetSafeNumberInput<double>("Введіть ціну одиниці: ");
+        quantity = Configuration::GetSafeNumberInput<int>("Введіть кількість: ");
 
-    std::cout << "Введіть дату останнього завозу (YYYYMMDD): ";
-    std::getline(std::cin, lastSupplyDate);
+        std::cout << "Введіть дату останнього завозу (YYYYMMDD): ";
+        std::getline(std::cin, lastSupplyDate);
 
-    if (FindStoreItemByName(name) != nullptr) {
-        std::cerr << "// Помилка: Товар з такою назвою вже існує. Операцію скасовано." << std::endl;
-        return;
+        if (FindStoreItemByName(name) != nullptr) {
+            std::cerr << "// Помилка: Товар з такою назвою вже існує. Операцію скасовано." << std::endl;
+            return;
+        }
+
+        m_products.push_back(std::make_unique<StoreItem>(name, unit, price, quantity, lastSupplyDate));
+        std::cout << "// Товар '" << name << "' успішно додано до бази." << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "// Помилка при додаванні товару: " << e.what() << std::endl;
+        Configuration::s_logger->LogError("Помилка в AddObject: " + std::string(e.what()));
     }
-
-    m_products.push_back(std::make_unique<StoreItem>(name, unit, price, quantity, lastSupplyDate));
-    std::cout << "// Товар '" << name << "' успішно додано до бази." << std::endl;
 }
 
 void StoreManager::EditObject()
 {
-    std::string name;
-    std::cout << "\n=== РЕДАГУВАННЯ ТОВАРУ ===" << std::endl;
-    std::cout << "Введіть назву товару для редагування: ";
-    Configuration::ClearInputBuffer();
-    std::getline(std::cin, name);
+    try {
+        std::string name;
+        std::cout << "\n=== РЕДАГУВАННЯ ТОВАРУ ===" << std::endl;
+        std::cout << "Введіть назву товару для редагування: ";
+        Configuration::ClearInputBuffer();
+        std::getline(std::cin, name);
 
-    StoreItem* item = FindStoreItemByName(name);
+        StoreItem* item = FindStoreItemByName(name);
 
-    if (item) {
-        int choice;
-        std::cout << "Що редагувати? 1. Ціна 2. Кількість 3. Одиниця виміру: ";
-        if (!(std::cin >> choice)) {
-            std::cerr << "// Невірний ввід." << std::endl;
-            Configuration::ClearInputBuffer();
-            return;
-        }
-
-        switch (choice) {
-            case 1: {
-                double newPrice = Configuration::GetSafeNumberInput<double>("Введіть нову ціну: ");
-                item->SetPrice(newPrice);
-                break;
-            }
-            case 2: {
-                int newQuantity = Configuration::GetSafeNumberInput<int>("Введіть нову кількість: ");
-                item->SetQuantity(newQuantity);
-                break;
-            }
-            case 3: {
-                std::string newUnit;
-                std::cout << "Введіть нову одиницю виміру: ";
+        if (item) {
+            int choice;
+            std::cout << "Що редагувати? 1. Ціна 2. Кількість 3. Одиниця виміру: ";
+            if (!(std::cin >> choice)) {
+                std::cerr << "// Невірний ввід." << std::endl;
                 Configuration::ClearInputBuffer();
-                std::getline(std::cin, newUnit);
-                item->SetUnit(newUnit);
-                break;
-            }
-            default:
-                std::cerr << "// Невірний вибір поля." << std::endl;
                 return;
+            }
+
+            try {
+                switch (choice) {
+                    case 1: {
+                        double newPrice = Configuration::GetSafeNumberInput<double>("Введіть нову ціну: ");
+                        item->SetPrice(newPrice);
+                        break;
+                    }
+                    case 2: {
+                        int newQuantity = Configuration::GetSafeNumberInput<int>("Введіть нову кількість: ");
+                        item->SetQuantity(newQuantity);
+                        break;
+                    }
+                    case 3: {
+                        std::string newUnit;
+                        std::cout << "Введіть нову одиницю виміру: ";
+                        Configuration::ClearInputBuffer();
+                        std::getline(std::cin, newUnit);
+                        item->SetUnit(newUnit);
+                        break;
+                    }
+                    default:
+                        std::cerr << "// Невірний вибір поля." << std::endl;
+                        return;
+                }
+                std::cout << "// Товар '" << name << "' успішно оновлено." << std::endl;
+            } catch (const std::exception& e) {
+                std::cerr << "// Помилка при редагуванні поля: " << e.what() << std::endl;
+                Configuration::s_logger->LogError("Помилка в EditObject (switch): " + std::string(e.what()));
+            }
+        } else {
+            std::cerr << "// Помилка: Товар не знайдено." << std::endl;
         }
-        std::cout << "// Товар '" << name << "' успішно оновлено." << std::endl;
-    } else {
-        std::cerr << "// Помилка: Товар не знайдено." << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "// Помилка при редагуванні товару: " << e.what() << std::endl;
+        Configuration::s_logger->LogError("Помилка в EditObject: " + std::string(e.what()));
     }
 }
 

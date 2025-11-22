@@ -62,15 +62,20 @@ bool AuthManager::LoadUsersFromFile()
 
 void AuthManager::SaveUsers() const
 {
-    std::ofstream file(m_userFile);
-    if (!file.is_open()) {
-        Configuration::s_logger->LogError("Не вдалося зберегти дані користувачів.");
-        std::cerr << "// Помилка: Не вдалося зберегти дані користувачів." << std::endl;
-        return;
-    }
+    try {
+        std::ofstream file(m_userFile);
+        if (!file.is_open()) {
+            Configuration::s_logger->LogError("Не вдалося зберегти дані користувачів.");
+            std::cerr << "// Помилка: Не вдалося зберегти дані користувачів." << std::endl;
+            return;
+        }
 
-    for (const auto& user : m_users) {
-        file << user->GetLogin() << ":" << user->GetPassword() << std::endl;
+        for (const auto& user : m_users) {
+            file << user->GetLogin() << ":" << user->GetPassword() << std::endl;
+        }
+    } catch (const std::exception& e) {
+        Configuration::s_logger->LogError("Помилка при збереженні користувачів: " + std::string(e.what()));
+        std::cerr << "// Помилка при збереженні користувачів: " << e.what() << std::endl;
     }
 }
 
@@ -112,35 +117,40 @@ bool AuthManager::AuthenticateUser(const std::string& login, const std::string& 
 
 void AuthManager::AddNewUser()
 {
-    std::string login, password, roleStr;
-    std::cout << "--- СТВОРЕННЯ КОРИСТУВАЧА ---" << std::endl;
-    std::cout << "Введіть новий логін: ";
-    Configuration::ClearInputBuffer();
-    std::getline(std::cin, login);
+    try {
+        std::string login, password, roleStr;
+        std::cout << "--- СТВОРЕННЯ КОРИСТУВАЧА ---" << std::endl;
+        std::cout << "Введіть новий логін: ";
+        Configuration::ClearInputBuffer();
+        std::getline(std::cin, login);
 
-    if (std::any_of(m_users.begin(), m_users.end(), [&](const auto& u){ return u->GetLogin() == login; })) {
-        Configuration::s_logger->LogError("Спроба додати існуючого користувача: " + login); // Журналювання
-        std::cerr << "// Помилка: Користувач з логіном '" << login << "' вже існує." << std::endl;
-        return;
+        if (std::any_of(m_users.begin(), m_users.end(), [&](const auto& u){ return u->GetLogin() == login; })) {
+            Configuration::s_logger->LogError("Спроба додати існуючого користувача: " + login); // Журналювання
+            std::cerr << "// Помилка: Користувач з логіном '" << login << "' вже існує." << std::endl;
+            return;
+        }
+
+        std::cout << "Введіть пароль: ";
+        std::getline(std::cin, password);
+
+        std::cout << "Введіть роль (admin/user): ";
+        std::getline(std::cin, roleStr);
+        std::transform(roleStr.begin(), roleStr.end(), roleStr.begin(), ::tolower);
+
+        bool isAdmin = (roleStr == "admin");
+
+        if (isAdmin) {
+            m_users.push_back(std::make_unique<Admin>(login, password));
+        } else {
+            m_users.push_back(std::make_unique<BasicUser>(login, password));
+        }
+
+        Configuration::s_logger->LogInfo("Створено нового користувача: " + login + (isAdmin ? " (Admin)" : " (User)")); // Журналювання
+        std::cout << "// Користувач '" << login << "' (" << (isAdmin ? "Admin" : "User") << ") успішно доданий." << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "// Помилка при створенні користувача: " << e.what() << std::endl;
+        Configuration::s_logger->LogError("Помилка в AddNewUser: " + std::string(e.what()));
     }
-
-    std::cout << "Введіть пароль: ";
-    std::getline(std::cin, password);
-
-    std::cout << "Введіть роль (admin/user): ";
-    std::getline(std::cin, roleStr);
-    std::transform(roleStr.begin(), roleStr.end(), roleStr.begin(), ::tolower);
-
-    bool isAdmin = (roleStr == "admin");
-
-    if (isAdmin) {
-        m_users.push_back(std::make_unique<Admin>(login, password));
-    } else {
-        m_users.push_back(std::make_unique<BasicUser>(login, password));
-    }
-
-    Configuration::s_logger->LogInfo("Створено нового користувача: " + login + (isAdmin ? " (Admin)" : " (User)")); // Журналювання
-    std::cout << "// Користувач '" << login << "' (" << (isAdmin ? "Admin" : "User") << ") успішно доданий." << std::endl;
 }
 
 void AuthManager::DeleteUser()

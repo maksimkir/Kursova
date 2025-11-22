@@ -26,7 +26,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update" />
+    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AuthManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaleProcessor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SaleProcessor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StoreManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/StoreManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/Презентація.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/Презентація.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/документація.docx" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/документація.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +118,11 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration name="Kursova_2kurs_" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Kursova_2kurs_" TARGET_NAME="Kursova_2kurs_" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Kursova_2kurs_" RUN_TARGET_NAME="Kursova_2kurs_">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -140,23 +153,7 @@
       <workItem from="1763660631680" duration="792000" />
       <workItem from="1763709800691" duration="1236000" />
       <workItem from="1763735978608" duration="9461000" />
-      <workItem from="1763759819538" duration="6321000" />
-    </task>
-    <task id="LOCAL-00009" summary="create Admin.h">
-      <option name="closed" value="true" />
-      <created>1763126246064</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126246064</updated>
-    </task>
-    <task id="LOCAL-00010" summary="create Admin.cpp">
-      <option name="closed" value="true" />
-      <created>1763126264020</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126264020</updated>
+      <workItem from="1763759819538" duration="8434000" />
     </task>
     <task id="LOCAL-00011" summary="create BasicUser.h">
       <option name="closed" value="true" />
@@ -534,7 +531,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763818481144</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763818574884</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818574884</updated>
+    </task>
+    <task id="LOCAL-00059" summary="added update">
+      <option name="closed" value="true" />
+      <created>1763818629902</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818629902</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
