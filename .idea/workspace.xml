@@ -28,30 +28,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Admin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/AuthManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicUser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicUser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicUser.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/BasicUser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Configuration.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IPrintable.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/IPrintable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logger.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Logger.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Product.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Receipt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Receipt.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Receipt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaleProcessor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/SaleProcessor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaleProcessor.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/SaleProcessor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreItem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreItem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/StoreItem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StoreManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/StoreManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/User.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/Презентація.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/Презентація.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/документація.docx" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/документація.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,23 +164,7 @@
       <workItem from="1763903635126" duration="42000" />
       <workItem from="1763957256817" duration="111000" />
       <workItem from="1764145792478" duration="5404000" />
-      <workItem from="1764172905338" duration="8922000" />
-    </task>
-    <task id="LOCAL-00012" summary="create BasicUser.cpp">
-      <option name="closed" value="true" />
-      <created>1763126329978</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126329978</updated>
-    </task>
-    <task id="LOCAL-00013" summary="create AuthManager.h">
-      <option name="closed" value="true" />
-      <created>1763126759906</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1763126759906</updated>
+      <workItem from="1764172905338" duration="10024000" />
     </task>
     <task id="LOCAL-00014" summary="create AuthManager.cpp">
       <option name="closed" value="true" />
@@ -580,7 +542,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763823340795</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764187061192</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1764187061192</updated>
+    </task>
+    <task id="LOCAL-00062" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764187102272</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1764187102272</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
