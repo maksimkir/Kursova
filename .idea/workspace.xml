@@ -26,11 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/Презентація.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/Презентація.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/документація.docx" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/документація.docx" afterDir="false" />
-    </list>
+    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,31 +160,7 @@
       <workItem from="1763903635126" duration="42000" />
       <workItem from="1763957256817" duration="111000" />
       <workItem from="1764145792478" duration="5404000" />
-      <workItem from="1764172905338" duration="10024000" />
-    </task>
-    <task id="LOCAL-00014" summary="create AuthManager.cpp">
-      <option name="closed" value="true" />
-      <created>1763129976402</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1763129976402</updated>
-    </task>
-    <task id="LOCAL-00015" summary="create Configuration.cpp">
-      <option name="closed" value="true" />
-      <created>1763130000476</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1763130000476</updated>
-    </task>
-    <task id="LOCAL-00016" summary="create Configuration.h">
-      <option name="closed" value="true" />
-      <created>1763130012392</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1763130012392</updated>
+      <workItem from="1764172905338" duration="10336000" />
     </task>
     <task id="LOCAL-00017" summary="create Product.h">
       <option name="closed" value="true" />
@@ -558,7 +530,31 @@
       <option name="project" value="LOCAL" />
       <updated>1764187102272</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764197920439</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1764197920439</updated>
+    </task>
+    <task id="LOCAL-00064" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764198118473</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1764198118473</updated>
+    </task>
+    <task id="LOCAL-00065" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764198124005</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1764198124005</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
