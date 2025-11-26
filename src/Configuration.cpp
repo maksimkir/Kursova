@@ -1,4 +1,4 @@
-#include "Configuration.h"
+#include "../include/Configuration.h"
 #include <limits>
 
 // Ініціалізація статичних констант

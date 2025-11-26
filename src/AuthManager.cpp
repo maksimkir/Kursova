@@ -1,7 +1,7 @@
-#include "AuthManager.h"
-#include "Configuration.h"
-#include "Admin.h"
-#include "BasicUser.h"
+#include "../include/AuthManager.h"
+#include "../include/Configuration.h"
+#include "../include/Admin.h"
+#include "../include/BasicUser.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>

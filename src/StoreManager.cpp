@@ -1,5 +1,5 @@
-#include "StoreManager.h"
-#include "Configuration.h"
+#include "../include/StoreManager.h"
+#include "../include/Configuration.h"
 #include <fstream>
 #include <sstream>
 #include <algorithm>

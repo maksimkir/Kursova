@@ -3,27 +3,27 @@ project(Kursova_2kurs_)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Kursova_2kurs_ main.cpp
-        IPrintable.h
-        StoreItem.cpp
-        StoreItem.h
-        User.cpp
-        User.h
-        Admin.cpp
-        Admin.h
-        BasicUser.cpp
-        BasicUser.h
-        AuthManager.cpp
-        AuthManager.h
-        Configuration.cpp
-        Configuration.h
-        Receipt.cpp
-        Receipt.h
-        SaleProcessor.cpp
-        SaleProcessor.h
-        StoreManager.cpp
-        StoreManager.h
-        Product.h
-        Logger.h
+add_executable(Kursova_2kurs_ src/main.cpp
+        include/IPrintable.h
+        src/StoreItem.cpp
+        include/StoreItem.h
+        src/User.cpp
+        include/User.h
+        src/Admin.cpp
+        include/Admin.h
+        src/BasicUser.cpp
+        include/BasicUser.h
+        src/AuthManager.cpp
+        include/AuthManager.h
+        src/Configuration.cpp
+        include/Configuration.h
+        src/Receipt.cpp
+        include/Receipt.h
+        src/SaleProcessor.cpp
+        include/SaleProcessor.h
+        src/StoreManager.cpp
+        include/StoreManager.h
+        include/Product.h
+        include/Logger.h
         store_items.csv
 )

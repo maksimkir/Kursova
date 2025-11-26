@@ -1,4 +1,4 @@
-#include "Receipt.h"
+#include "../include/Receipt.h"
 #include <iostream>
 #include <iomanip>
 #include <sstream>

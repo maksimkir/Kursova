@@ -1,9 +1,9 @@
 #include <complex>
 
-#include "AuthManager.h"
-#include "StoreManager.h"
-#include "Configuration.h"
-#include "SaleProcessor.h"
+#include "../include/AuthManager.h"
+#include "../include/StoreManager.h"
+#include "../include/Configuration.h"
+#include "../include/SaleProcessor.h"
 #include <iostream>
 #include <limits>
 #include <stdexcept>
@@ -91,7 +91,6 @@ int main()
                 Configuration::ClearInputBuffer();
             }
         }
-
         std::cout << "Програма завершила роботу. Дані збережено." << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "// КРИТИЧНА ПОМИЛКА: " << e.what() << std::endl;

@@ -1,6 +1,6 @@
-#include "SaleProcessor.h"
-#include "StoreManager.h"
-#include "Configuration.h"
+#include "../include/SaleProcessor.h"
+#include "../include/StoreManager.h"
+#include "../include/Configuration.h"
 #include <iostream>
 #include <limits>
 #include <iomanip>
