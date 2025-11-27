@@ -25,5 +25,5 @@ add_executable(Kursova_2kurs_ src/main.cpp
         include/StoreManager.h
         include/Product.h
         include/Logger.h
-        store_items.csv
+        cmake-build-debug/store_items.csv
 )

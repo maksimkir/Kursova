@@ -1,7 +1,7 @@
 # ninja log v6
-122	1425	7858502256465092	CMakeFiles/Kursova_2kurs_.dir/SaleProcessor.cpp.obj	9335e1fd631c55ca
-6	886	7858761081131561	build.ninja	989a3351eb8048e7
 35	1452	7858502255596207	CMakeFiles/Kursova_2kurs_.dir/main.cpp.obj	4caaf11abe9d86ba
+6	886	7859018486769993	build.ninja	989a3351eb8048e7
+122	1425	7858502256465092	CMakeFiles/Kursova_2kurs_.dir/SaleProcessor.cpp.obj	9335e1fd631c55ca
 117	2405	7851863848203526	CMakeFiles/Kursova_2kurs_.dir/StoreItem.cpp.obj	a76008be5fec0e3d
 272	2073	7851863849760293	CMakeFiles/Kursova_2kurs_.dir/BasicUser.cpp.obj	8b077bdd57aba7fa
 221	2029	7851863849256950	CMakeFiles/Kursova_2kurs_.dir/Admin.cpp.obj	1a444ad6c7232cbc
@@ -9,10 +9,10 @@
 128	1771	7851910498414010	CMakeFiles/Kursova_2kurs_.dir/Configuration.cpp.obj	2c8fc86795bb425a
 90	1696	7858502256142286	CMakeFiles/Kursova_2kurs_.dir/AuthManager.cpp.obj	a1f28ba0e17d87c1
 413	4064	7851863851167286	CMakeFiles/Kursova_2kurs_.dir/Receipt.cpp.obj	82d5ad6437e46787
-145	1864	7858502256692396	CMakeFiles/Kursova_2kurs_.dir/StoreManager.cpp.obj	43e8498fc1dd3dc3
 247	2006	7858536894502913	CMakeFiles/Kursova_2kurs_.dir/src/BasicUser.cpp.obj	b3e1a94761b83314
+145	1864	7858502256692396	CMakeFiles/Kursova_2kurs_.dir/StoreManager.cpp.obj	43e8498fc1dd3dc3
 3928	4943	7858536931294065	Kursova_2kurs_.exe	6250bcb8f44e0780
-6	886	7858761080839769	C:/F/CHNU/Cursoba_2course/Kursova(2kurs)/cmake-build-debug/cmake_install.cmake	989a3351eb8048e7
+6	886	7859018486557696	C:/F/CHNU/Cursoba_2course/Kursova(2kurs)/cmake-build-debug/cmake_install.cmake	989a3351eb8048e7
 139	1985	7858536893407579	CMakeFiles/Kursova_2kurs_.dir/src/Admin.cpp.obj	46a8fb8839340fd0
 97	1992	7858536892990143	CMakeFiles/Kursova_2kurs_.dir/src/User.cpp.obj	a660fc42b27a5dbe
 334	2129	7858536895357487	CMakeFiles/Kursova_2kurs_.dir/src/Configuration.cpp.obj	38053675f885482c
@@ -22,3 +22,5 @@
 287	3426	7858536894897003	CMakeFiles/Kursova_2kurs_.dir/src/AuthManager.cpp.obj	2927387adf95fef4
 427	3788	7858536896297138	CMakeFiles/Kursova_2kurs_.dir/src/Receipt.cpp.obj	db7ade60fbf6ce8b
 590	3927	7858536897925609	CMakeFiles/Kursova_2kurs_.dir/src/StoreManager.cpp.obj	8c0db18b606fdfcb
+5	826	7859018486769993	build.ninja	989a3351eb8048e7
+5	826	7859018486769993	C:/F/CHNU/Cursoba_2course/Kursova(2kurs)/cmake-build-debug/cmake_install.cmake	989a3351eb8048e7

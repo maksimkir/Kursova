@@ -26,7 +26,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update" />
+    <list default="true" id="39e5075b-7d38-455f-9f5e-9e047e561fe2" name="Changes" comment="added update">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f21073dc1dc47850fb7b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-794293c66dd398690fcb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-11-26T16-01-48-0278.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Kursova_2kurs_-Debug-e23cc94d180a50aa4d4b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store_items.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +123,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\F\CHNU\Cursoba_2course\Kursova(2kurs)\cmake-build-debug" />
+      <recent name="C:\F\CHNU\Cursoba_2course\Kursova(2kurs)" />
       <recent name="C:\F\CHNU\Cursoba_2course\Kursova(2kurs)\src" />
       <recent name="C:\F\CHNU\Cursoba_2course\Kursova(2kurs)\include" />
     </key>
@@ -160,23 +174,7 @@
       <workItem from="1763903635126" duration="42000" />
       <workItem from="1763957256817" duration="111000" />
       <workItem from="1764145792478" duration="5404000" />
-      <workItem from="1764172905338" duration="10336000" />
-    </task>
-    <task id="LOCAL-00017" summary="create Product.h">
-      <option name="closed" value="true" />
-      <created>1763130033890</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1763130033890</updated>
-    </task>
-    <task id="LOCAL-00018" summary="create Receipt.cpp">
-      <option name="closed" value="true" />
-      <created>1763130065786</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1763130065786</updated>
+      <workItem from="1764172905338" duration="23918000" />
     </task>
     <task id="LOCAL-00019" summary="create Receipt.h">
       <option name="closed" value="true" />
@@ -554,7 +552,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764198124005</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764198236218</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1764198236218</updated>
+    </task>
+    <task id="LOCAL-00067" summary="added update">
+      <option name="closed" value="true" />
+      <created>1764198258115</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1764198258115</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
